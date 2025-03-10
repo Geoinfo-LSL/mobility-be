@@ -9,10 +9,7 @@ public class AuthResponseMapper {
         return new JoinResponse(id, userId);
     }
 
-    public static LoginResponse from(UsersEntity usersEntity, String accessToken){
-     return LoginResponse.builder()
-             .id(usersEntity.getId())
-            .accessToken(accessToken)
-                .build();
+    public static LoginResponse from(UsersEntity usersEntity, String accessToken) {
+        return LoginResponse.builder().id(usersEntity.getId()).accessToken(accessToken).build();
     }
 }

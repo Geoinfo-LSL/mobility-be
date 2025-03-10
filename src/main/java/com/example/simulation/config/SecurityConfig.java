@@ -1,11 +1,11 @@
 package com.example.simulation.config;
 
-import com.example.simulation.filter.JwtRequestFilter;
 import com.example.simulation.filter.ExceptionHandlerFilter;
+import com.example.simulation.filter.JwtRequestFilter;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.CsrfConfigurer;
@@ -17,8 +17,6 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import java.util.List;
 
 @Configuration
 @EnableWebSecurity
@@ -41,20 +39,14 @@ public class SecurityConfig {
         http.httpBasic(HttpBasicConfigurer::disable);
 
         // ✅ 모든 경로에 대한 접근 허용 (임시 설정)
-        http.authorizeHttpRequests(auth ->
-            auth
-                .anyRequest()
-                .permitAll());
+        http.authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
 
         // JWT 필터 및 예외 처리 필터 제거 (모든 요청 허용 상태)
         // http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)
         //        .addFilterBefore(exceptionHandlerFilter, JwtRequestFilter.class);
 
-        http.sessionManagement(session ->
-                session
-                        .sessionCreationPolicy(
-                                SessionCreationPolicy
-                                        .STATELESS));
+        http.sessionManagement(
+                session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
         return http.build();
     }
@@ -63,7 +55,8 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOriginPatterns(List.of("*")); // 모든 Origin 허용
-        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // 모든 HTTP 메서드 허용
+        configuration.setAllowedMethods(
+                List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // 모든 HTTP 메서드 허용
         configuration.setAllowedHeaders(List.of("*")); // 모든 헤더 허용
         configuration.setExposedHeaders(List.of("Authorization")); // Authorization 헤더 노출
         configuration.setAllowCredentials(true); // 자격 증명 허용 (JWT 토큰 전달 시 필요)

@@ -1,13 +1,12 @@
 package com.example.simulation.users.domain;
 
-
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Getter
 @Entity
-@NoArgsConstructor(access = AccessLevel.PROTECTED)  // JPA에서만 사용하도록 보호
+@NoArgsConstructor(access = AccessLevel.PROTECTED) // JPA에서만 사용하도록 보호
 @AllArgsConstructor
 @Table(name = "users")
 @EntityListeners(AuditingEntityListener.class)
@@ -35,5 +34,4 @@ public class UsersEntity {
         this.username = username;
         this.email = email;
     }
-
 }

@@ -14,11 +14,7 @@ public record LoginResponse(
         @NotBlank @Schema(description = "회원 RefreshToken", example = "Bearer abcd...")
                 String refreshToken) {
     @Builder
-    public LoginResponse(
-            Long id,
-            String accessToken,
-            String refreshToken
-            ) {
+    public LoginResponse(Long id, String accessToken, String refreshToken) {
         this.id = id;
         this.accessToken = accessToken;
         this.refreshToken = refreshToken;

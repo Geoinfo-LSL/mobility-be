@@ -14,5 +14,4 @@ public interface AuthApi {
 
     @Operation(summary = "로그인을 합니다.", description = "담당자: 최민석")
     Api<LoginResponse> login(LoginRequest loginRequest);
-
 }

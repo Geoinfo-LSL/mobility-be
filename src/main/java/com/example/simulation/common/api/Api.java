@@ -7,7 +7,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.validation.Valid;
 
-
 @JsonPropertyOrder({"result", "body"})
 public record Api<T>(Result result, @JsonInclude(JsonInclude.Include.NON_NULL) @Valid T body) {
     public static <T> Api<T> success(SuccessTypeCode successType) {

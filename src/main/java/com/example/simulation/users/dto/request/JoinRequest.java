@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class JoinRequest{
+public class JoinRequest {
     @NotBlank(message = "사용자의 ID를 입력해주세요.")
     @Schema(description = "사용자의 ID", example = "test123")
     private String userId;
@@ -35,7 +35,8 @@ public class JoinRequest{
     private String username;
 
     @Builder
-    public JoinRequest(String userId, String email, String password, String passwordConfirm, String username) {
+    public JoinRequest(
+            String userId, String email, String password, String passwordConfirm, String username) {
         this.userId = userId;
         this.email = email;
         this.password = password;

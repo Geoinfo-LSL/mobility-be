@@ -8,15 +8,14 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Component;
-
-import javax.crypto.SecretKey;
 import java.time.Duration;
 import java.util.Base64;
 import java.util.Date;
 import java.util.Objects;
+import javax.crypto.SecretKey;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
@@ -46,10 +45,7 @@ public class JwtUtils {
     // JWT에서 Claims 추출, 만료되었으면 예외 발생
     private Claims getAllClaimsFromToken(String token) {
         try {
-            Jws<Claims> jwt = Jwts.parser()
-                    .verifyWith(key)
-                    .build()
-                    .parseSignedClaims(token);
+            Jws<Claims> jwt = Jwts.parser().verifyWith(key).build().parseSignedClaims(token);
             return jwt.getPayload();
         } catch (ExpiredJwtException exception) {
             throw new UnauthorizedException(AuthErrorType.TOKEN_NOT_FOUND);
@@ -86,12 +82,13 @@ public class JwtUtils {
 
     // Authorization 헤더에서 "Bearer " 제거 후 토큰 반환
     public String extractTokenFromHeader(String authorizationHeader) {
-        return authorizationHeader.startsWith("Bearer ") ? authorizationHeader.substring(7) : authorizationHeader;
+        return authorizationHeader.startsWith("Bearer ")
+                ? authorizationHeader.substring(7)
+                : authorizationHeader;
     }
 
     // 토큰에서 사용자 ID 추출
     public Long getIdFromToken(String token) {
         return getAllClaimsFromToken(token).get("jti", Long.class);
     }
-
 }

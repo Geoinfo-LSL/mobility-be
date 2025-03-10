@@ -1,10 +1,9 @@
 package com.example.simulation.users.repository;
 
 import com.example.simulation.users.domain.UsersEntity;
+import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-
-import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor

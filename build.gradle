@@ -47,7 +47,18 @@ dependencies {
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
 }
 
+spotless {
+	java {
+		target('**/*.java')
+		targetExclude('src/main/generated/**/*.java')
 
+		importOrder()
+		removeUnusedImports()
+		googleJavaFormat().aosp().formatJavadoc(false)
+		trimTrailingWhitespace()
+		endWithNewline()
+	}
+}
 tasks.named('test') {
 	useJUnitPlatform()
 }
