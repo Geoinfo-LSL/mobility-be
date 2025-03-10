@@ -1,4 +1,4 @@
-package com.example.simulation.common.type;
+package com.example.mobility.common.type;
 
 public interface SuccessTypeCode {
     Integer getCode();

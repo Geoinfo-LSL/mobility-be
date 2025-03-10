@@ -1,8 +1,8 @@
-package com.example.simulation.auth.mapper;
+package com.example.mobility.auth.mapper;
 
-import com.example.simulation.auth.dto.response.LoginResponse;
-import com.example.simulation.users.domain.UsersEntity;
-import com.example.simulation.users.dto.response.JoinResponse;
+import com.example.mobility.auth.dto.response.LoginResponse;
+import com.example.mobility.users.domain.UsersEntity;
+import com.example.mobility.users.dto.response.JoinResponse;
 
 public class AuthResponseMapper {
     public static JoinResponse from(Long id, String userId) {

@@ -1,12 +1,12 @@
-package com.example.simulation.auth.controller;
+package com.example.mobility.auth.controller;
 
-import com.example.simulation.auth.dto.request.LoginRequest;
-import com.example.simulation.auth.dto.response.LoginResponse;
-import com.example.simulation.auth.service.AuthService;
-import com.example.simulation.common.api.Api;
-import com.example.simulation.common.type.AuthSuccessType;
-import com.example.simulation.users.dto.request.JoinRequest;
-import com.example.simulation.users.dto.response.JoinResponse;
+import com.example.mobility.auth.dto.request.LoginRequest;
+import com.example.mobility.auth.dto.response.LoginResponse;
+import com.example.mobility.auth.service.AuthService;
+import com.example.mobility.common.api.Api;
+import com.example.mobility.common.type.AuthSuccessType;
+import com.example.mobility.users.dto.request.JoinRequest;
+import com.example.mobility.users.dto.response.JoinResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

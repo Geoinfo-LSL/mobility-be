@@ -1,8 +1,8 @@
-package com.example.simulation.common.utils;
+package com.example.mobility.common.utils;
 
-import com.example.simulation.common.exception.UnauthorizedException;
-import com.example.simulation.common.type.AuthErrorType;
-import com.example.simulation.users.domain.UsersEntity;
+import com.example.mobility.common.exception.UnauthorizedException;
+import com.example.mobility.common.type.AuthErrorType;
+import com.example.mobility.users.domain.UsersEntity;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;

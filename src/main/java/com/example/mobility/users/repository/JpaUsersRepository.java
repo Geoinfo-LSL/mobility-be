@@ -1,6 +1,6 @@
-package com.example.simulation.users.repository;
+package com.example.mobility.users.repository;
 
-import com.example.simulation.users.domain.UsersEntity;
+import com.example.mobility.users.domain.UsersEntity;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

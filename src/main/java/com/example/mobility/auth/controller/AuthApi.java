@@ -1,9 +1,9 @@
-package com.example.simulation.auth.controller;
+package com.example.mobility.auth.controller;
 
-import com.example.simulation.auth.dto.request.LoginRequest;
-import com.example.simulation.auth.dto.response.LoginResponse;
-import com.example.simulation.common.api.Api;
-import com.example.simulation.users.dto.request.JoinRequest;
+import com.example.mobility.auth.dto.request.LoginRequest;
+import com.example.mobility.auth.dto.response.LoginResponse;
+import com.example.mobility.common.api.Api;
+import com.example.mobility.users.dto.request.JoinRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 

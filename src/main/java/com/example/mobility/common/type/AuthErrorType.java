@@ -1,4 +1,4 @@
-package com.example.simulation.common.type;
+package com.example.mobility.common.type;
 
 public enum AuthErrorType implements ErrorTypeCode {
     TOKEN_EXPIRED("BAD REQUEST", "토큰이 만료되었습니다."),

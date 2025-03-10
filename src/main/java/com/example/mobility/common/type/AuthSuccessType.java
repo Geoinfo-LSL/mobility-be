@@ -1,4 +1,4 @@
-package com.example.simulation.common.type;
+package com.example.mobility.common.type;
 
 public enum AuthSuccessType implements SuccessTypeCode {
     SIGN_UP(201, "CREATE", "회원 가입에 성공하였습니다."),

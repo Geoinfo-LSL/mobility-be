@@ -1,7 +1,7 @@
-package com.example.simulation.config;
+package com.example.mobility.config;
 
-import com.example.simulation.filter.ExceptionHandlerFilter;
-import com.example.simulation.filter.JwtRequestFilter;
+import com.example.mobility.filter.ExceptionHandlerFilter;
+import com.example.mobility.filter.JwtRequestFilter;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

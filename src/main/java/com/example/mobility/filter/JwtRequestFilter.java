@@ -1,7 +1,7 @@
-package com.example.simulation.filter;
+package com.example.mobility.filter;
 
-import com.example.simulation.common.utils.JwtUtils;
-import com.example.simulation.users.repository.UsersRepository;
+import com.example.mobility.common.utils.JwtUtils;
+import com.example.mobility.users.repository.UsersRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

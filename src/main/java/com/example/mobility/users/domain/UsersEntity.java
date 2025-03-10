@@ -1,4 +1,4 @@
-package com.example.simulation.users.domain;
+package com.example.mobility.users.domain;
 
 import jakarta.persistence.*;
 import lombok.*;

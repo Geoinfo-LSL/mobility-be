@@ -1,6 +1,6 @@
-package com.example.simulation.common.exception;
+package com.example.mobility.common.exception;
 
-import com.example.simulation.common.type.ErrorTypeCode;
+import com.example.mobility.common.type.ErrorTypeCode;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 

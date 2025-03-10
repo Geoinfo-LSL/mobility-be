@@ -1,4 +1,4 @@
-package com.example.simulation.auth.dto.response;
+package com.example.mobility.auth.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,7 +1,7 @@
-package com.example.simulation.auth.mapper;
+package com.example.mobility.auth.mapper;
 
-import com.example.simulation.users.domain.UsersEntity;
-import com.example.simulation.users.dto.request.JoinRequest;
+import com.example.mobility.users.domain.UsersEntity;
+import com.example.mobility.users.dto.request.JoinRequest;
 
 public class AuthEntityMapper {
     public static UsersEntity of(JoinRequest userDto, String encodedPassword) {

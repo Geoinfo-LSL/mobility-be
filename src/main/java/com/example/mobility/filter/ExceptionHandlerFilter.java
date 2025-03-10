@@ -1,7 +1,7 @@
-package com.example.simulation.filter;
+package com.example.mobility.filter;
 
-import com.example.simulation.common.api.Api;
-import com.example.simulation.common.exception.ApiExceptionImpl;
+import com.example.mobility.common.api.Api;
+import com.example.mobility.common.exception.ApiExceptionImpl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

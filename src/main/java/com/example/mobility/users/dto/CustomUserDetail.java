@@ -1,6 +1,6 @@
-package com.example.simulation.users.dto;
+package com.example.mobility.users.dto;
 
-import com.example.simulation.users.domain.UsersEntity;
+import com.example.mobility.users.domain.UsersEntity;
 import java.util.Collection;
 import java.util.Collections;
 import lombok.Data;

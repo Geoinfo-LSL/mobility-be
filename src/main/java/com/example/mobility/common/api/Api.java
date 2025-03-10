@@ -1,8 +1,8 @@
-package com.example.simulation.common.api;
+package com.example.mobility.common.api;
 
-import com.example.simulation.common.exception.ApiException;
-import com.example.simulation.common.type.ErrorTypeCode;
-import com.example.simulation.common.type.SuccessTypeCode;
+import com.example.mobility.common.exception.ApiException;
+import com.example.mobility.common.type.ErrorTypeCode;
+import com.example.mobility.common.type.SuccessTypeCode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.validation.Valid;

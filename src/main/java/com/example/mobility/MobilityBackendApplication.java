@@ -1,12 +1,12 @@
-package com.example.simulation;
+package com.example.mobility;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SimulationBackendApplication {
+public class MobilityBackendApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SimulationBackendApplication.class, args);
+        SpringApplication.run(MobilityBackendApplication.class, args);
     }
 }
