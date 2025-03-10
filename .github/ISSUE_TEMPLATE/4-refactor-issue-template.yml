@@ -1,10 +1,19 @@
-name: '🐶기능 추가 이슈'
-description: '새로운 기능 추가, 기존 기능 변경 시 작성합니다.'
-labels: [feature]
-title: '🐶 이슈 제목'
+name: '🚧 리팩토링 이슈'
+description: '멍하냥 서버 레포지토리에 이슈를 생성하며, Jira와 연동됩니다.'
+labels: [refactor]
+title: '🚧 이슈 제목'
 assignees:
   - octocat
 body:
+  - type: input
+    id: parentKey
+    attributes:
+      label: '🎫 Parent Ticket Number'
+      description: '상위 작업의 Ticket Number를 기입해주세요'
+      placeholder: 'KAN-27'
+    validations:
+      required: true
+
   - type: textarea
     id: description
     attributes:

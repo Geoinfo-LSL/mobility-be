@@ -1,7 +1,7 @@
-name: '🐶기능 추가 이슈'
-description: '새로운 기능 추가, 기존 기능 변경 시 작성합니다.'
-labels: [feature]
-title: '🐶 이슈 제목'
+name: '⚙️ 테스트코드 이슈'
+description: '테스트코드 작성 또는 간단한 작업 시 작성합니다.'
+labels: [test]
+title: '⚙️ 이슈 제목'
 assignees:
   - octocat
 body:
