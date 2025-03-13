@@ -1,19 +1,10 @@
 name: '🚧 리팩토링 이슈'
-description: '멍하냥 서버 레포지토리에 이슈를 생성하며, Jira와 연동됩니다.'
+description: '리펙토링, 디렉토리 변경시에 작성합니다.'
 labels: [refactor]
 title: '🚧 이슈 제목'
 assignees:
   - octocat
 body:
-  - type: input
-    id: parentKey
-    attributes:
-      label: '🎫 Parent Ticket Number'
-      description: '상위 작업의 Ticket Number를 기입해주세요'
-      placeholder: 'KAN-27'
-    validations:
-      required: true
-
   - type: textarea
     id: description
     attributes:
